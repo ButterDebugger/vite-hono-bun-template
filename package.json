@@ -1,0 +1,22 @@
+{
+  "name": "vite-hono-bun",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run src/dev.ts",
+    "dev:build": "bun run vite build --emptyOutDir --mode development --watch",
+    "dev:serve": "bun run --hot src/index.ts",
+    "build": "bun run vite build --emptyOutDir",
+    "serve": "bun run src/index.ts",
+    "start": "bun run vite build --emptyOutDir && bun run src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.7.7"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.10",
+    "glob": "^11.0.2",
+    "vite": "^6.3.1"
+  }
+}

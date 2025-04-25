@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { logger } from "hono/logger";
 import { serveStatic } from "hono/bun";
+import type { Serve } from "bun";
 
 const port = process.env.PORT ?? 3000;
 const isDev = process.env.NODE_ENV === "development";
@@ -15,4 +16,4 @@ app.get("/*", serveStatic({ root: "dist" }));
 export default {
 	port,
 	fetch: app.fetch
-};
+} satisfies Serve;

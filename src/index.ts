@@ -15,5 +15,6 @@ app.get("/*", serveStatic({ root: "dist" }));
 
 export default {
 	port,
-	fetch: app.fetch
+	fetch: app.fetch,
+	development: isDev
 } satisfies Serve;

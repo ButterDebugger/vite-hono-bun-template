@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "bun run src/dev.ts",
+    "dev": "concurrently \"bun run dev:build\" \"bun run dev:serve\"",
     "dev:build": "bun run vite build --emptyOutDir --mode development --watch",
     "dev:serve": "bun run --hot src/index.ts",
     "build": "bun run vite build --emptyOutDir",
@@ -15,7 +15,8 @@
     "hono": "^4.7.7"
   },
   "devDependencies": {
-    "@types/bun": "^1.2.10",
+    "@types/bun": "latest",
+    "concurrently": "^9.1.2",
     "glob": "^11.0.2",
     "vite": "^6.3.1"
   }

@@ -28,7 +28,7 @@
     "noUncheckedSideEffectImports": true
   },
   "include": [
-    "public",
-    "static"
+    "public/**/*",
+    "static/**/*"
   ]
 }
